@@ -44,7 +44,7 @@ struct Line {
     }
 
     Line parallel(const Point& p) {
-        return Line(0,0,0);
+        return Line(A,B,-(A*p.x + B*p.y));
     }
 
     bool perpendicular(const Line& other) const {
